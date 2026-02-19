@@ -439,3 +439,129 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* =============================================
+   AUTOMATION PAGE STYLES
+   ============================================= */
+
+.auto-hero {
+  padding: 5rem 0 3rem;
+  text-align: center;
+}
+
+.auto-hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  margin: 0 0 1.2rem;
+}
+
+.auto-hero .lead {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.auto-features {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.auto-feature-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.auto-feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.auto-feature-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+}
+
+.auto-feature-card p {
+  margin: 0;
+}
+
+.auto-connect-wrap {
+  text-align: center;
+}
+
+.auto-connect-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.auto-scope-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 1.8rem;
+}
+
+.auto-scope-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.95rem;
+}
+
+.auto-connect-card .btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.auto-connect-note {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.auto-privacy {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  max-width: 720px;
+}
+
+.auto-privacy h3 {
+  font-size: 1.1rem;
+  margin: 1.8rem 0 0.5rem;
+}
+
+.auto-privacy h3:first-child {
+  margin-top: 0;
+}
+
+.auto-privacy p {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.cta-email {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.3rem 0 1rem;
+}
+
+.auto-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.auto-etsy-disclaimer {
+  font-style: italic;
+  opacity: 0.8;
+}

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nordbloom Gallery — Personal Etsy shop automation tool by Myrenblom.work" />
+    <title>Nordbloom Automation — Myrenblom.work</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="/">Myrenblom.work</a>
+        <nav class="nav-links">
+          <a href="/">Portfolio</a>
+          <a href="#features">Features</a>
+          <a href="#connect">Connect</a>
+          <a href="#privacy">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="auto-hero" id="top">
+        <div class="container">
+          <p class="eyebrow">Personal Shop Tool</p>
+          <h1>Nordbloom Gallery Automation</h1>
+          <p class="lead">
+            A private automation tool built to manage and optimize my Etsy shop,
+            <strong>Nordbloom Gallery</strong>. This application connects to Etsy's API
+            to streamline listing management, SEO optimization, and order workflows —
+            exclusively for my own shop. It is not a commercial product or SaaS.
+          </p>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-head">
+            <h2>What this tool does</h2>
+            <p>Built for a single shop — Nordbloom Gallery — to automate repetitive Etsy tasks.</p>
+          </div>
+          <div class="grid auto-features">
+            <div class="auto-feature-card reveal">
+              <div class="auto-feature-icon">🔍</div>
+              <h3>Bulk SEO Updates</h3>
+              <p class="muted">
+                Batch-update titles, tags, and descriptions across all active listings.
+                Optimizes for Etsy search ranking using keyword research and competitive analysis.
+              </p>
+            </div>
+            <div class="auto-feature-card reveal">
+              <div class="auto-feature-icon">💰</div>
+              <h3>Dynamic Pricing</h3>
+              <p class="muted">
+                Adjusts listing prices based on seasonal trends and competitor pricing data.
+                Ensures competitive positioning while maintaining healthy margins.
+              </p>
+            </div>
+            <div class="auto-feature-card reveal">
+              <div class="auto-feature-icon">📦</div>
+              <h3>Draft Publishing</h3>
+              <p class="muted">
+                Publishes draft listings in bulk with pre-configured metadata, pricing,
+                and shipping profiles. Reduces manual clicks from dozens to one action.
+              </p>
+            </div>
+            <div class="auto-feature-card reveal">
+              <div class="auto-feature-icon">💌</div>
+              <h3>Automated Thank-You Messages</h3>
+              <p class="muted">
+                Sends personalized thank-you messages to buyers after purchase,
+                improving customer experience and encouraging repeat business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OAUTH CONNECT -->
+      <section class="section band" id="connect">
+        <div class="container auto-connect-wrap">
+          <div class="section-head">
+            <h2>Connect with Etsy</h2>
+            <p>Authorize this tool to access listing and order data from Nordbloom Gallery.</p>
+          </div>
+          <div class="auto-connect-card">
+            <p class="muted">
+              Clicking the button below will redirect you to Etsy's secure OAuth page.
+              This tool requests the following permissions:
+            </p>
+            <ul class="auto-scope-list">
+              <li><strong>listings_r</strong> — Read listing data (titles, tags, descriptions, status)</li>
+              <li><strong>listings_w</strong> — Update listings (SEO fields, pricing, publish drafts)</li>
+            </ul>
+            <a
+              class="btn"
+              href="https://www.etsy.com/oauth/connect?response_type=code&redirect_uri=https://myrenblom.work/automation&scope=listings_r+listings_w&client_id=PLACEHOLDER"
+            >
+              Connect Etsy Account
+            </a>
+            <p class="auto-connect-note muted">
+              Only the shop owner (Leo Myrenblom) uses this tool. No third-party access is granted.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRIVACY POLICY -->
+      <section class="section" id="privacy">
+        <div class="container">
+          <div class="section-head">
+            <h2>Privacy Policy</h2>
+            <p>Last updated: February 2026</p>
+          </div>
+          <div class="auto-privacy">
+            <h3>What data we access</h3>
+            <p>
+              This tool accesses Etsy listing data (titles, tags, descriptions, prices, status)
+              and order data (buyer display name) exclusively for the Nordbloom Gallery shop
+              through Etsy's official API.
+            </p>
+
+            <h3>How data is used</h3>
+            <p>
+              Data is used solely to automate shop management tasks: SEO optimization,
+              pricing adjustments, draft publishing, and post-purchase thank-you messages.
+              No data is sold, shared with third parties, or used for advertising.
+            </p>
+
+            <h3>Data storage</h3>
+            <p>
+              API tokens are stored securely on a private server accessible only to the shop owner.
+              Listing data is cached temporarily during processing and not retained long-term.
+              No buyer personal data (email, address) is stored.
+            </p>
+
+            <h3>Who has access</h3>
+            <p>
+              Only Leo Myrenblom (shop owner and developer) has access to this tool and its data.
+              This is a personal tool, not a commercial service.
+            </p>
+
+            <h3>Data deletion</h3>
+            <p>
+              To request data deletion or revoke access, disconnect the app from your
+              <a href="https://www.etsy.com/your/account/security" style="color: var(--accent); text-decoration: underline;">Etsy account settings</a>
+              or contact the developer.
+            </p>
+
+            <h3>Contact</h3>
+            <p>
+              For privacy questions or support, email
+              <a href="mailto:leonardhugo08@gmail.com" style="color: var(--accent); text-decoration: underline;">leonardhugo08@gmail.com</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUPPORT -->
+      <section class="cta" id="support">
+        <div class="container cta-grid">
+          <div>
+            <h2>Support</h2>
+            <p>Questions about this tool or the Nordbloom Gallery shop? Get in touch.</p>
+          </div>
+          <div class="cta-card">
+            <p class="muted">Support Email</p>
+            <p class="cta-email">leonardhugo08@gmail.com</p>
+            <a class="btn" href="mailto:leonardhugo08@gmail.com">Contact Support</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container auto-footer">
+        <p>© 2026 Myrenblom.work — Automation Portfolio.</p>
+        <p class="auto-etsy-disclaimer">
+          The term "Etsy" is a trademark of Etsy, Inc. This application uses Etsy's API
+          but is not endorsed or certified by Etsy, Inc.
+        </p>
+        <p>Based in Stockholm · <a href="mailto:leonardhugo08@gmail.com" style="color: var(--muted); text-decoration: underline;">leonardhugo08@gmail.com</a></p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
