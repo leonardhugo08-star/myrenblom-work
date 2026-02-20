@@ -207,31 +207,90 @@
       /* PRICING */
       .k-pricing { padding: 5rem 0; background: #f9f9fb; }
 
-      .k-price-card {
-        max-width: 540px;
-        margin: 0 auto;
-        background: linear-gradient(135deg, #0f0c29, #302b63);
-        border-radius: 16px;
-        padding: 3rem;
-        color: #fff;
-        text-align: center;
-        box-shadow: 0 20px 60px rgba(124,58,237,0.3);
+      /* SERVICES LADDER */
+      .k-services { padding: 5rem 0; }
+
+      .k-ladder {
+        display: grid;
+        gap: 1.2rem;
         margin-top: 2.5rem;
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      .k-price-card .price {
-        font-size: 3rem;
-        font-weight: 700;
-        color: #a78bfa;
+      .k-rung {
+        display: grid;
+        grid-template-columns: 64px 1fr auto;
+        align-items: center;
+        gap: 1.2rem;
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 1.4rem 1.8rem;
+        box-shadow: var(--shadow);
+        border-left: 4px solid transparent;
+        transition: transform 0.15s, box-shadow 0.15s;
+      }
+
+      .k-rung:hover {
+        transform: translateX(4px);
+        box-shadow: 0 8px 28px rgba(124,58,237,0.12);
+      }
+
+      .k-rung:nth-child(1) { border-color: #a78bfa; }
+      .k-rung:nth-child(2) { border-color: #60a5fa; }
+      .k-rung:nth-child(3) { border-color: #34d399; }
+      .k-rung:nth-child(4) { border-color: #f59e0b; }
+      .k-rung:nth-child(5) { border-color: #f87171; }
+
+      .k-rung-icon {
+        font-size: 2rem;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .k-rung-body h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: #1a1a2e;
+      }
+
+      .k-rung-body p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.55;
+        margin: 0;
+      }
+
+      .k-rung-price {
+        text-align: right;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+
+      .k-rung-price .rp-amount {
         display: block;
-        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #7c3aed;
       }
 
-      .k-price-card .price-sub {
-        font-size: 0.9rem;
-        color: #ddd6fe;
-        margin-bottom: 2rem;
+      .k-rung-price .rp-sub {
+        font-size: 0.75rem;
+        color: var(--muted);
       }
+
+      .k-rung.k-rung-entry {
+        background: linear-gradient(135deg, #0f0c29, #302b63);
+        border-color: #a78bfa;
+        color: #fff;
+      }
+
+      .k-rung.k-rung-entry .k-rung-body h3 { color: #e9d5ff; }
+      .k-rung.k-rung-entry .k-rung-body p { color: #c4b5fd; }
+      .k-rung.k-rung-entry .k-rung-price .rp-amount { color: #a78bfa; font-size: 1.3rem; }
+      .k-rung.k-rung-entry .k-rung-price .rp-sub { color: #ddd6fe; }
 
       .k-include-list {
         list-style: none;
@@ -257,6 +316,31 @@
         font-size: 0.85rem;
         color: #c4b5fd;
         margin-top: 1rem;
+      }
+
+      .k-price-card {
+        max-width: 540px;
+        margin: 2.5rem auto 0;
+        background: linear-gradient(135deg, #0f0c29, #302b63);
+        border-radius: 16px;
+        padding: 3rem;
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(124,58,237,0.3);
+      }
+
+      .k-price-card .price {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #a78bfa;
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+
+      .k-price-card .price-sub {
+        font-size: 0.9rem;
+        color: #ddd6fe;
+        margin-bottom: 2rem;
       }
 
       /* FAQ */
@@ -335,6 +419,7 @@
         <nav class="nav-links">
           <a href="/">Portfolio</a>
           <a href="#process">Hur det fungerar</a>
+          <a href="#tjanster">Tjänster</a>
           <a href="#pris">Pris</a>
           <a href="mailto:leo@myrenblom.se">Kontakt</a>
         </nav>
@@ -447,14 +532,86 @@
         </div>
       </section>
 
+      <!-- SERVICES LADDER -->
+      <section class="k-services section" id="tjanster">
+        <div class="container section-center">
+          <p class="eyebrow">Tjänster</p>
+          <h2>Från kartläggning till full automation</h2>
+          <p class="lead muted">Börja med assessmentet. Bygg vidare i din egen takt.</p>
+          <div class="k-ladder">
+
+            <div class="k-rung k-rung-entry reveal">
+              <div class="k-rung-icon">🔍</div>
+              <div class="k-rung-body">
+                <h3>AI Assessment</h3>
+                <p>45 min deep-dive + professionell rapport med sparad tid, ROI-kalkyl och verktygsrekommendationer. Steg ett för alla kunder.</p>
+              </div>
+              <div class="k-rung-price">
+                <span class="rp-amount">4 999 kr</span>
+                <span class="rp-sub">engång</span>
+              </div>
+            </div>
+
+            <div class="k-rung reveal">
+              <div class="k-rung-icon">🗺️</div>
+              <div class="k-rung-body">
+                <h3>Processoptimering</h3>
+                <p>Vi kartlägger ett brutet flöde på djupet och levererar ett "ideal future state"-dokument med all slöseri borttaget.</p>
+              </div>
+              <div class="k-rung-price">
+                <span class="rp-amount">15–25 tkr</span>
+                <span class="rp-sub">per process</span>
+              </div>
+            </div>
+
+            <div class="k-rung reveal">
+              <div class="k-rung-icon">⚡</div>
+              <div class="k-rung-body">
+                <h3>No-code automation</h3>
+                <p>Zapier, Make eller n8n-flöden som kopplar samman dina befintliga verktyg. Sparar timmar av manuellt copy-paste varje vecka.</p>
+              </div>
+              <div class="k-rung-price">
+                <span class="rp-amount">5–15 tkr</span>
+                <span class="rp-sub">engång</span>
+              </div>
+            </div>
+
+            <div class="k-rung reveal">
+              <div class="k-rung-icon">🤖</div>
+              <div class="k-rung-body">
+                <h3>Custom AI-assistent</h3>
+                <p>En AI tränad på ditt material — rutiner, utbildningar, FAQ. Ditt team hittar svar på sekunder istället för att fråga dig.</p>
+              </div>
+              <div class="k-rung-price">
+                <span class="rp-amount">15 tkr+</span>
+                <span class="rp-sub">engång</span>
+              </div>
+            </div>
+
+            <div class="k-rung reveal">
+              <div class="k-rung-icon">🚀</div>
+              <div class="k-rung-body">
+                <h3>Agent-implementation</h3>
+                <p>En AI-agent som kör processer automatiskt åt dig, dygnet runt. Setup + löpande underhåll. Passar teknikvana verksamheter.</p>
+              </div>
+              <div class="k-rung-price">
+                <span class="rp-amount">25–50 tkr</span>
+                <span class="rp-sub">+ 5 tkr/mån</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <!-- PRICING -->
       <section class="k-pricing" id="pris">
         <div class="container section-center">
-          <p class="eyebrow">Pris</p>
-          <h2>Allt ingår. Inga dolda kostnader.</h2>
+          <p class="eyebrow">Kom igång</p>
+          <h2>Starta med assessmentet. Betala bara om du ser värdet.</h2>
           <div class="k-price-card reveal">
             <span class="price">4 999 kr</span>
-            <p class="price-sub">Engångspris — komplett assessment</p>
+            <p class="price-sub">Engångspris — komplett AI Assessment</p>
             <ul class="k-include-list">
               <li>Gratis intro-samtal (15 min)</li>
               <li>Deep-dive på Zoom (45 min)</li>
